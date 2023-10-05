@@ -1,12 +1,6 @@
 .naranjapuro{
 background-color: orange;
 }
-.fondo{
-
-}
-.naranjaResalte{
-
-}
-.letra{
-    
+.gitBg{
+    background-image: url("/recursos/git.png");
 }
