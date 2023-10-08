@@ -1,17 +1,19 @@
-.naranjapuro{
-background-color: orange;
+.naranjapuro {
+    background-color: orange;
 }
-.gitBg{
+
+.gitBg {
     background-image: url("/recursos/git.png");
 }
 
-header{
+header {
     background-color: #E85D04;
-    }
-    
-    .bg-color{
+}
+
+.bg-color {
     background-color: aliceblue;
-    }
-    .colorcopy{
-        color: black;
-    }
+}
+
+.colorcopy {
+    color: black;
+}
