@@ -19,16 +19,89 @@
   </header>
   <main class="m-5 bg-">
     <div class="container col-12 border">
-      <h2 class=" text-primary">Errores comunes en git</h2>
+      <h2 class=" text-primary fw-bold">Errores comunes en git</h2>
       <hr>
       <ol>
-        <li><h5 class="text-primary">Error 1:</h5><p>Not a git command / no es un comando de git</p></li>
+        <h5 class="text-primary">Error 1:</h5><p>Not a git command / no es un comando de git</p>
         <h5 class="text-primary">Error 2:</h5> <p>not a git repository / no es un repositorio git</p>
-        <h5 class="text-primary">Error 3:</h5>
-        <h5 class="text-primary">Error 4:</h5>
-        <h5 class="text-primary">Error 5:</h5>
-        <h5 class="text-primary">Error 6:</h5>
+        <h5 class="text-primary">Error 3:</h5> <p>Another git process seems to be running in this repository / Otro proceso git parece estar ejecutando en el repositorio</p>
+        <h5 class="text-primary">Error 4:</h5> <p>No configured push destination / No se ha configurado un destino para el empuje</p>
+        <h5 class="text-primary">Error 5:</h5> <p>The current branch master has no upstream branch / La rama actual master no tiene una rama upstream</p>
+        <h5 class="text-primary">Error 6:</h5> <p>Could not read from remote repository / No se pudo leer del repositorio remoto</p>
       </ol>
+
+      <h3 class=" text-primary"><span class="fw-bold">Error 1:</span> No es un comando de git</h3>
+      <hr>
+      <h5 class="text-primary">Mensaje de error</h5>
+      <p>git: 'comando' no es un comando de git. Mira 'git --help'.</p>
+      <h5 class="text-primary">Solución</h5>
+      <p>La solución más simple consiste en revisar que el comando que se está ejecutando esté correctamente escrito. Si no estás
+      seguro de la escritura, puedes utilizar el comando git help para desplegar la ayuda de git, que muestra la lista de
+      comandos válidos.</p>
+
+      <h3 class=" text-primary"><span class="fw-bold">Error 2:</span> No es un repositorio git</h3>
+      <hr>
+      <h5 class="text-primary">Mensaje de error</h5>
+      <p>fatal: no es un repositorio git (ni ninguno de los directorios superiores): .git</p>
+      <h5 class="text-primary">Solución</h5>
+      <p>La solución normalmente es de mover la terminal actual a un directorio que contenga el repositorio deseado. Para mover
+      la terminal de directorio/carpeta, se puede usar el comando cd seguido del nombre del directorio al cual se quiere
+      acceder. Por ejemplo, cd mi_repositorio mueve la terminal desde el directorio actual hasta el subdirectorio
+      "mi_repositorio".</p>
+
+      <h3 class=" text-primary"><span class="fw-bold">Error 3:</span> Otro proceso git parece estar ejecutando en el repositorio</h3>
+      <hr>
+      <h5 class="text-primary">Mensaje de error</h5>
+      <p>fatal: No se puede crear '.git/index.lock': El fichero ya existe.</p>
+      <h5 class="text-primary">Solución</h5>
+      <p>La solución más simple consiste en revisar las terminales que tengas abiertas y ver si hay algún proceso de git
+      ejecutandose (asegúrate también de revisar cualquier editor de texto que estés ocupando). Si lo encuentras, puedes
+      terminarlo normalmente o forzar a que termine de ejecutarse presionando Ctrl-C o Cmd-C.</p>
+
+      <h3 class=" text-primary"><span class="fw-bold">Error 4:</span> No se ha configurado un destino para el empuje.</h3>
+      <hr>
+      <h5 class="text-primary">Mensaje de error</h5>
+      <p>fatal: No se ha configurado un destino para el empuje.</p>
+      <h5 class="text-primary">Solución</h5>
+      <p>La solución consiste en configurar un destino. Para aquello, se puede ejecutar el siguiente comando:
+      
+      git remote add origin "url" </p>
+
+      <h3 class=" text-primary"><span class="fw-bold">Error 5:</span> La rama actual no tiene una rama upstream.</h3>
+      <hr>
+      <h5 class="text-primary">Mensaje de error</h5>
+      <p>fatal: La rama actual "nombre_rama" no tiene una rama upstream.</p>
+      <h5 class="text-primary">Solución</h5>
+      <p>La solución consiste en configurar la rama actual como una rama upstream. Para aquello, se puede ejecutar el siguiente
+      comando: git push --set-upstream origin "nombre_rama"</p>
+
+      <h3 class=" text-primary"><span class="fw-bold">Error 6:</span> No se pudo leer del repositorio remoto.</h3>
+      <hr>
+      <h5 class="text-primary">Mensaje de error</h5>
+      <p>Por favor asegúrate de que tengas los permisos de acceso correctos
+      y que el repositorio exista</p>
+      <h5 class="text-primary">Solución</h5>
+      <p>Para descartar el primer caso, si estás haciendo git clone, revisa que la URL del repositorio sea correcta en el comando
+      que estás ejecutando. Si estás haciendo otra acción como git push, revisa que el destino remoto esté configurado
+      correctamente. Para esto, ejecuta el comando git remote -v y revisa que la URL del destino remoto sea correcta, y que
+      tengas acceso a ella.</p>
+      <p>Para descartar el segundo caso, revisa que tengas los permisos necesarios para acceder o modificar el repositorio:</p>
+      <ul class="mb-5">
+        <li>Si estás haciendo git clone y el repositorio es público, no debería haber problemas de acceso. Si el repositorio es
+        privado, asegúrate de que tengas los permisos necesarios para acceder a él. Si eres capaz de acceder al repositorio
+        desde el navegador, pero no desde git, deberás verificar la configuración de tus credenciales. Para repositorios en
+        GitHub, puedes revisar este enlace que contiene una guía que explica el acceso a repositorios remotos.</li>
+        <li>Si estás haciendo una acción como git push, confirma que tienes acceso de escritura al repositorio.</li>
+      </ul>
+
+
+
+
+
+
+
+
+
 
 
 
